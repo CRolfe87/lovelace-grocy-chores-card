@@ -775,8 +775,8 @@ class GrocyChoresCard extends LitElement {
 
             taskData["due_date"] = taskDueDate;
         }
-
-        taskData["assigned_to_user_id"] = this._getUserId();
+//Don't assign a user to the task. May add a dropdown to assign user in the future but too lazy rn
+        //taskData["assigned_to_user_id"] = this._getUserId();
 
         this._hass.callService("grocy", "add_generic", {
             entity_type: "tasks", data: taskData
